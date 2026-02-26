@@ -163,7 +163,7 @@ export function TaskDetailView({ taskId }: { taskId: string }) {
             <div className="space-y-2 pt-4">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span>Última actualización:</span>
-                <span className="font-medium text-foreground">{formatDate(task.lastUpdated)}</span>
+                <span className="font-medium text-foreground">{formatDate(task.updatedAt)}</span>
                 <span>por</span>
                 <span className="font-medium text-foreground">{task.lastUpdatedBy}</span>
               </div>
