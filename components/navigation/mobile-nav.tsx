@@ -2,15 +2,15 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, Briefcase, Plus, Settings, LayoutGrid } from "lucide-react"
+import { Home, Briefcase, Plus, Settings, LayoutGrid, ClipboardList } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { href: "/", label: "Inicio", icon: Home },
   { href: "/worker", label: "Reportes", icon: Briefcase },
+  { href: "/tasks", label: "Tareas", icon: ClipboardList },
   { href: "/report/new", label: "Nuevo", icon: Plus },
   { href: "/admin", label: "Admin", icon: LayoutGrid },
-  { href: "/design-system", label: "Diseño", icon: Settings },
 ]
 
 export function MobileNav() {
@@ -21,7 +21,9 @@ export function MobileNav() {
       <div className="flex items-center justify-around h-16">
         {navItems.map((item) => {
           const Icon = item.icon
-          const isActive = pathname === item.href || pathname.startsWith(item.href)
+          const isActive = item.href === "/"
+            ? pathname === "/"
+            : pathname === item.href || pathname.startsWith(item.href + "/")
 
           return (
             <Link

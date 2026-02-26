@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Search, Plus, Settings, AlertTriangle, Bell, ChevronRight, Tag, FolderOpen, CheckSquare, Clock, FileText, Users } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -299,14 +300,16 @@ export function MobileHomeView() {
             </CardContent>
           </Card>
 
-          {/* Ver más */}
-          <Button 
-            variant="ghost" 
-            className="w-full text-primary hover:text-primary/80 hover:bg-primary/5"
-          >
-            Ver todos los reportes
-            <ChevronRight className="h-4 w-4 ml-1" />
-          </Button>
+          {/* Ver mas */}
+          <Link href="/tasks">
+            <Button 
+              variant="ghost" 
+              className="w-full text-primary hover:text-primary/80 hover:bg-primary/5"
+            >
+              Ver todos los reportes
+              <ChevronRight className="h-4 w-4 ml-1" />
+            </Button>
+          </Link>
         </section>
       </main>
     </div>

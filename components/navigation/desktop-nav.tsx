@@ -2,15 +2,16 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, Briefcase, Plus, Settings, LayoutGrid } from "lucide-react"
+import { Home, Briefcase, Plus, Settings, LayoutGrid, ClipboardList } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { href: "/", label: "Inicio", icon: Home },
   { href: "/worker", label: "Reportes", icon: Briefcase },
-  { href: "/admin", label: "Administración", icon: LayoutGrid },
-  { href: "/design-system", label: "Sistema de Diseño", icon: Settings },
+  { href: "/tasks", label: "Tareas", icon: ClipboardList },
+  { href: "/admin", label: "Administracion", icon: LayoutGrid },
+  { href: "/design-system", label: "Sistema de Diseno", icon: Settings },
 ]
 
 export function DesktopNav() {

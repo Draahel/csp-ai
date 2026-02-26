@@ -209,13 +209,15 @@ export function WorkerHomeView() {
             </Table>
           </Card>
 
-          <Button 
-            variant="outline" 
-            className="w-full border-border hover:bg-muted bg-transparent"
-          >
-            Ver todos los reportes
-            <ChevronRight className="h-4 w-4 ml-1" />
-          </Button>
+          <Link href="/tasks">
+            <Button 
+              variant="outline" 
+              className="w-full border-border hover:bg-muted bg-transparent"
+            >
+              Ver todos los reportes
+              <ChevronRight className="h-4 w-4 ml-1" />
+            </Button>
+          </Link>
         </section>
 
         {/* Alertas Section */}
