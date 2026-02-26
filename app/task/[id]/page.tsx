@@ -1,7 +1,7 @@
-"use client"
-
+import { use } from "react"
 import { TaskDetailView } from "@/components/task/task-detail-view"
 
-export default function TaskDetailPage({ params }: { params: { id: string } }) {
-  return <TaskDetailView taskId={params.id} />
+export default function TaskDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
+  return <TaskDetailView taskId={id} />
 }
